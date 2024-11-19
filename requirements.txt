@@ -1,0 +1,12 @@
+dnc==1.1.0
+einops==0.8.0
+extensions==0.4
+Gymnasium==0.26.3
+mazelib==0.9.14
+numpy==1.23.4
+opt_einsum==3.3.0
+pandas==2.2.3
+pykeops==2.2.3
+ray==2.3.0
+scipy==1.14.1
+torch==2.4.0+cu118
