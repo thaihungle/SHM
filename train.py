@@ -64,64 +64,6 @@ def config_gru():
 
 	return config
 
-def config_mamba():
-	from popgym.baselines.ray_models.ray_mamba import RayMamba
-
-	# See what GRU-specific hyperparameters we can set
-	print(RayMamba.MODEL_CONFIG)
-	# Show other settable model hyperparameters like
-	# what the actor/critic branches look like,
-	# what hidden size to use,
-	# whether to add a positional embedding, etc.
-	print(RayMamba.BASE_CONFIG)
-	# How long the temporal window for backprop is
-	# This doesn't need to be longer than 1024
-	bptt_size = 1024
-	config = {
-	"model": {
-		"max_seq_len": bptt_size,
-		"custom_model": RayMamba,
-		"custom_model_config": {
-		# Override the hidden_size from BASE_CONFIG
-		# The input and output sizes of the MLP feeding the memory model
-		"preprocessor_input_size": 128,
-		"preprocessor_output_size": 64,
-		"preprocessor": nn.Sequential(nn.Linear(128, 64), nn.ReLU()),
-		# this is the size of the recurrent state in most cases
-		"hidden_size": args.m,
-		# We should also change other parts of the architecture to use
-		# this new hidden size
-		# For the GRU, the output is of size hidden_size
-		"postprocessor": nn.Sequential(nn.Linear(args.m, 64), nn.ReLU()),
-		"postprocessor_output_size": 64,
-		# Actor and critic networks
-		"actor": nn.Linear(64, 64),
-		"critic": nn.Linear(64, 64),
-		# We can also override GRU-specific hyperparams
-		"num_recurrent_layers": 1,
-		},
-	},
-	"num_gpus": args.fgpu,
-	"num_workers": 2,
-	# Some other rllib defaults you might want to change
-	# See https://docs.ray.io/en/latest/rllib/rllib-training.html#common-parameters
-	# for a full list of rllib settings
-	#
-	# These should be a factor of bptt_size
-	"sgd_minibatch_size": bptt_size * 8,
-	# Should be a factor of sgd_minibatch_size
-	"train_batch_size": bptt_size * 64,
-	# The environment we are training on
-	"env": f"popgym-{args.env}-v0",
-	# You probably don't want to change these values
-	"rollout_fragment_length": bptt_size,
-	"framework": "torch",
-	"horizon": bptt_size,
-	"batch_mode": "complete_episodes",
-	}
-
-	return config
-
 def config_ffm():
 	from popgym.baselines.ray_models.ray_ffm import RayFFM
 
@@ -181,64 +123,7 @@ def config_ffm():
 	}
 
 	return config
-
-def config_fwp():
-	if args.model=="fwp":
-		from popgym.baselines.ray_models.ray_fwp import FastWeightProgrammer
 	
-	# See what specific hyperparameters we can set
-	print(FastWeightProgrammer.MODEL_CONFIG)
-	# Show other settable model hyperparameters like
-	# what the actor/critic branches look like,
-	# what hidden size to use,
-	# whether to add a positional embedding, etc.
-	print(FastWeightProgrammer.BASE_CONFIG)
-	# How long the temporal window for backprop is
-	# This doesn't need to be longer than 1024
-	bptt_size = 1024
-	config = {
-	"model": {
-		"max_seq_len": bptt_size,
-		"custom_model": FastWeightProgrammer,
-		"custom_model_config": {
-		# Override the hidden_size from BASE_CONFIG
-		# The input and output sizes of the MLP feeding the memory model
-		"preprocessor_input_size": 128,
-		"preprocessor_output_size": 64,
-		"preprocessor": nn.Sequential(nn.Linear(128, 64), nn.ReLU()),
-		# this is the size of the recurrent state in most cases
-		"hidden_size": args.h*args.h,
-		# We should also change other parts of the architecture to use
-		# this new hidden size
-		"embedding_size": 128,
-		"postprocessor": nn.Sequential(nn.Linear(args.h*args.h, 64), nn.ReLU()),
-		"postprocessor_output_size": 64,
-		# Actor and critic networks
-		"actor": nn.Linear(64, 64),
-		"critic": nn.Linear(64, 64)
-		},
-	},
-	"num_gpus": args.fgpu,
-	"num_workers": 2,
-	# Some other rllib defaults you might want to change
-	# See https://docs.ray.io/en/latest/rllib/rllib-training.html#common-parameters
-	# for a full list of rllib settings
-	#
-	# These should be a factor of bptt_size
-	"sgd_minibatch_size": bptt_size * 8,
-	# Should be a factor of sgd_minibatch_size
-	"train_batch_size": bptt_size * 64,
-	# The environment we are training on
-	"env": f"popgym-{args.env}-v0",
-	# You probably don't want to change these values
-	"rollout_fragment_length": bptt_size,
-	"framework": "torch",
-	"horizon": bptt_size,
-	"batch_mode": "complete_episodes",
-	}
-
-	return config
-
 def config_shm():
    
 	from popgym.baselines.ray_models.ray_shm import SHMAgent
@@ -322,12 +207,8 @@ if __name__ == '__main__':
 
 	if args.model=="gru":
 		config = config_gru()
-	if args.model=="mamba":
-		config = config_mamba()
 	elif args.model=="ffm":
 		config = config_ffm()
-	elif "fwp" in args.model:
-		config = config_fwp()
 	elif args.model=="shm":
 		config = config_shm()
 	ngpu = 1
