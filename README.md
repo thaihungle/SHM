@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="assets/Basic-TS-logo-for-white.png#gh-light-mode-only" height=200>
-  <img src="assets/Basic-TS-logo-for-black.png#gh-dark-mode-only" height=200>
+  <img src="assets/shm_logo.png" height=200>
   <h3><b> Stable Hadamard Memory: A Unified Linear Memory Framework </b></h3>
 </div>
 
