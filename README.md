@@ -12,7 +12,7 @@
 
 <div align="center">
 
-[![LICENSE](https://img.shields.io/badge/MIT-license)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
+[![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange)](https://pytorch.org/)
 
 
