@@ -13,7 +13,8 @@
 
 [![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange)](https://pytorch.org/)
-[![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)]([https://pytorch.org/](https://github.com/proroklab/popgym))
+[![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)](https://github.com/proroklab/popgym))
+[![Pomdp-Baselines](https://img.shields.io/badge/Power_by-Pomdp-baselines-pink)](https://github.com/twni2016/pomdp-baselines))
 
 
 </div>
