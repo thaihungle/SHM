@@ -1,6 +1,6 @@
 <div align="center">
   <img src="assets/shm_logo.png" height=200>
-  <h3><b> Stable Hadamard Memory: A Unified Linear Memory Framework </b></h3>
+  <h2><b> Stable Hadamard Memory: A Unified Linear Memory Framework </b></h2>
 </div>
 
 <div align="center">
@@ -14,7 +14,7 @@
 [![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange)](https://pytorch.org/)
 [![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)](https://github.com/proroklab/popgym)
-[![Pomdp-Baselines](https://img.shields.io/badge/Power_by-Pomdp-Baselines-pink)](https://github.com/twni2016/pomdp-baselines)
+[![Pomdp-Baselines](https://img.shields.io/badge/Power_by-Pomdp_Baselines-pink)](https://github.com/twni2016/pomdp-baselines)
 
 
 </div>
