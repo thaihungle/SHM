@@ -13,7 +13,17 @@
 
 [![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange)](https://pytorch.org/)
+[![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)]([https://pytorch.org/](https://github.com/proroklab/popgym))
 
+
+</div>
+
+<div align="center">
+
+🎉 [**Getting Started**](./tutorial/getting_started.md) **|**
+📦 [**Tasks**](./tutorial/dataset_design.md) **|**
+🧠 [**Model**](./tutorial/model_design.md) **|**
+📜 [**Baselines**](./baselines/)
 
 </div>
 
