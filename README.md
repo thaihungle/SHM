@@ -114,6 +114,7 @@ Each task consists of 3 mode of environments: easy, medium and hard.
 
 **Example Training with SHM with memory size of 128:** 
 ```
+cd popgym
 python train.py --env AutoencodeEasy --model shm --m 128
 python train.py --env BattleshipEasy --model shm --m 128
 python train.py --env ConcentrationEasy --model shm --m 128
@@ -121,6 +122,7 @@ python train.py --env RepeatPreviousEasy --model shm --m 128
 ```
 **Example Training with SHM with memory size of 32:** 
 ```
+cd popgym
 python train.py --env AutoencodeEasy --model shm --m 32
 python train.py --env BattleshipEasy --model shm --m 32
 python train.py --env ConcentrationEasy --model shm --m 32
@@ -128,6 +130,7 @@ python train.py --env RepeatPreviousEasy --model shm --m 32
 ```
 
 **Results and Logs**
+
 See folder ./results for outputs and logs. 
 
 ## <a name="baselines"></a> 🧠 Baselines
