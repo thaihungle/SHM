@@ -133,12 +133,12 @@ python train.py --env RepeatPreviousEasy --model shm --m 32
 
 See folder ./popgym/results for Popgym's outputs and logs. You should be able to reproduce results like this:
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=100>
+  <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=400>
 </div>
 
 
 ## <a name="baselines"></a> 🧠 Baselines
 In addition to default POPGym baselines. We have added the following models:
-- [SHM](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_shm.py)
-- [Mamba (S6)](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_mamba.py)
-- [mLSTM](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_mLSTM.py)  
+- [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
+- [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
+- [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
