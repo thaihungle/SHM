@@ -21,14 +21,14 @@
 
 <div align="center">
 
-🎉 [**Getting Started**](#install)) **|**
-📦 [**Benchmarks**](./tutorial/dataset_design.md) **|**
-🧠 [**Baselines**](./baselines/)
+🚀 [**Getting Started**](#install) **|**
+🎯 [**Benchmarks**](#bench) **|**
+🧠 [**Baselines**](#baselines)
 
 </div>
 
 **Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients.
-SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
+🎉 SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
 
 ✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
 
@@ -79,7 +79,7 @@ conda activate SHM
 pip install -r popgym_requirements.txt
 ```
 
-## 🎯 Benchmarks
+## <a name="bench"></a> 🎯 Benchmarks
 
 #### Tasks
 Source code for Stable Hadamard Memory paper. 
@@ -93,3 +93,5 @@ python train.py --env AutoencodeEasy --model shm --m 128
 ```
 
 See folder ./results for outputs and logs. 
+
+## <a name="baselines"></a> 🧠 Baselines
