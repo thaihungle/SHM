@@ -66,16 +66,18 @@ git clone https://github.com/thaihungle/SHM.git
 #### 💿 Installing Dependencies
 
 Python 3.8 or higher is recommended. If you use GPUs, CUDA 11 or higher is recommended. 
-After ensuring the CUDA driver is installed correctly, you can install the other dependencies.
+After ensuring the CUDA driver is installed correctly, you can install the other dependencies. 
 
-#### Example Setup: Python 3.8 + PyTorch 2.4.0
+We recommend setting up separate dependencies for each benchmark.
+
+#### Example Setup for [PopGym](https://github.com/proroklab/popgym) benchmark: Python 3.8 + PyTorch 2.4.0
 
 ```bash
 # Install Python
 conda create -n SHM python=3.8
 conda activate SHM
 # Install other dependencies
-pip install -r requirements.txt
+pip install -r popgym_requirements.txt
 ```
 
 #### Tasks
