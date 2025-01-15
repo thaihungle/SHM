@@ -133,7 +133,7 @@ python train.py --env RepeatPreviousEasy --model shm --m 32
 
 See folder ./popgym/results for Popgym's outputs and logs. You should be able to reproduce results like this:
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=400>
+  <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=300>
 </div>
 
 
