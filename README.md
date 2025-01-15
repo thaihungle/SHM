@@ -132,7 +132,9 @@ python train.py --env RepeatPreviousEasy --model shm --m 32
 **Results and Logs**
 
 See folder ./popgym/results for Popgym's outputs and logs. You should be able to reproduce results like this:
-![image](https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=100>
+</div>
 
 
 ## <a name="baselines"></a> 🧠 Baselines
