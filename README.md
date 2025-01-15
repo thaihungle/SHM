@@ -131,7 +131,12 @@ python train.py --env RepeatPreviousEasy --model shm --m 32
 
 **Results and Logs**
 
-See folder ./results for outputs and logs. 
+See folder ./popgym/results for Popgym's outputs and logs. You should be able to reproduce results like this:
+![image](https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad)
+
 
 ## <a name="baselines"></a> 🧠 Baselines
-Find the SHM implementation at popgym/baselines/ray_models/ray_shm.py  
+In addition to default POPGym baselines. We have added the following models:
+- [SHM](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_shm.py)
+- [Mamba (S6)](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_mamba.py)
+- [mLSTM](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_mLSTM.py)  
