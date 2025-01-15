@@ -132,22 +132,22 @@ Each task consists of 3 mode of environments: easy, medium and hard.
 
 **Example easy training with SHM with memory size of 128:** 
 ```
-python train.py --env AutoencodeEasy --model shm --m 128
-python train.py --env BattleshipEasy --model shm --m 128
-python train.py --env ConcentrationEasy --model shm --m 128
-python train.py --env RepeatPreviousEasy --model shm --m 128
+python train_popgym.py --env AutoencodeEasy --model shm --m 128
+python train_popgym.py --env BattleshipEasy --model shm --m 128
+python train_popgym.py --env ConcentrationEasy --model shm --m 128
+python train_popgym.py --env RepeatPreviousEasy --model shm --m 128
 ```
 **Example hard training with SHM with memory size of 32:** 
 ```
-python train.py --env AutoencodeHard --model shm --m 32
-python train.py --env BattleshipHard --model shm --m 32
-python train.py --env ConcentrationHard --model shm --m 32
-python train.py --env RepeatPreviousHard --model shm --m 32
+python train_popgym.py --env AutoencodeHard --model shm --m 32
+python train_popgym.py --env BattleshipHard --model shm --m 32
+python train_popgym.py --env ConcentrationHard --model shm --m 32
+python train_popgym.py --env RepeatPreviousHard --model shm --m 32
 ```
 
 **Results and Logs**
 
-See folder ./results for Popgym's outputs and logs. You should be able to reproduce results like this:
+See folder ./popgym_results for Popgym's outputs and logs. You should be able to reproduce results like this:
 <div align="center">
   <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=300>
 </div>
@@ -160,6 +160,7 @@ In addition to default POPGym baselines. We have added the following models:
 - [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
 
 <details><summary>Other baselines</summary>
+  
 [FFM](ttps://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 </details>
