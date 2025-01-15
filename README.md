@@ -28,6 +28,7 @@
 </div>
 
 **Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients.
+
 🎉 SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
 
 ✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
@@ -69,7 +70,7 @@ After ensuring the CUDA driver is installed correctly, you can install the other
 
 We recommend setting up separate dependencies for each benchmark.
 
-#### Example Setup for [PopGym](https://github.com/proroklab/popgym) benchmark: Python 3.8 + PyTorch 2.4.0
+#### Example Setup for [POPGym](https://github.com/proroklab/popgym) benchmark: Python 3.8 + PyTorch 2.4.0
 
 ```bash
 # Install Python
@@ -81,13 +82,11 @@ pip install -r popgym_requirements.txt
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
-#### Tasks
-Source code for Stable Hadamard Memory paper. 
-Find the SHM implementation at popgym/baselines/ray_models/ray_shm.py  
-The code is based on: https://github.com/proroklab/popgym 
+#### POPGym
+[POPGym](https://github.com/proroklab/popgym) is designed to benchmark memory in deep reinforcement learning. 
+Here, we focus on the most memory-intensive tasks.
 
-
-### Run Training
+Example Training with SHM: 
 ```
 python train.py --env AutoencodeEasy --model shm --m 128 
 ```
@@ -95,3 +94,4 @@ python train.py --env AutoencodeEasy --model shm --m 128
 See folder ./results for outputs and logs. 
 
 ## <a name="baselines"></a> 🧠 Baselines
+Find the SHM implementation at popgym/baselines/ray_models/ray_shm.py  
