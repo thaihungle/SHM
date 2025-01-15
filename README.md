@@ -89,15 +89,34 @@ conda activate SHM
 pip install -r popgym_requirements.txt
 ```
 
+#### Example Setup for [Pomdp-baselines](https://github.com/twni2016/pomdp-baselines) benchmark: Python 3.8 + PyTorch 2.4.0
+
+```bash
+# Install Python
+conda create -n SHM python=3.8
+conda activate SHM
+# Install other dependencies
+pip install -r pompd_requirements.txt
+```
+
+
 ## <a name="bench"></a> 🎯 Benchmarks
 
 #### POPGym
 [POPGym](https://github.com/proroklab/popgym) is designed to benchmark memory in deep reinforcement learning. 
-Here, we focus on the most memory-intensive tasks.
+Here, we focus on the most memory-intensive tasks:
+- Autoencode
+- Battleship
+- Concentration
+- RepeatPrevious
+Each task consists of 3 mode of environments: easy, medium and hard. 
 
-Example Training with SHM: 
+**Example Training with SHM with memory size of 128:** 
 ```
-python train.py --env AutoencodeEasy --model shm --m 128 
+python train.py --env AutoencodeEasy --model shm --m 128
+python train.py --env BattleshipEasy --model shm --m 128
+python train.py --env ConcentrationEasy --model shm --m 128
+python train.py --env RepeatPreviousEasy --model shm --m 128
 ```
 
 See folder ./results for outputs and logs. 
