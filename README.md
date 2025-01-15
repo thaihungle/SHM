@@ -28,6 +28,12 @@
 
 </div>
 
+**Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients.
+SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
+
+✨ If you find SHM helpful, feel free to share your feedback or cite our work. Your support means a lot!
+For more details or to get started, check out the documentation. Let’s innovate together!
+
 # SHM
 Source code for Stable Hadamard Memory paper. 
 Find the SHM implementation at popgym/baselines/ray_models/ray_shm.py  
