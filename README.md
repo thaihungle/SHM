@@ -34,10 +34,23 @@ SHM excels at long-term reasoning due to its attention-free, parallelizable desi
 ✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
 
 **Why SHM?**
-- SHM provides a stable and efficient approach to memory management in deep sequence models, offering a strong foundation for advanced neural architectures.
+- SHM provides a stable and efficient approach to neural memory construction in deep sequence models, offering a strong foundation for advanced neural architectures.
 - SHM is designed to be flexible and adaptable, making it easy to integrate into a wide range of applications and research workflows.
 
 📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
+
+> [!IMPORTANT]
+> If you find this repository helpful for your work, please consider citing as follows:
+>
+> ```LaTeX
+> @article{le2024stable,
+>  title={Stable Hadamard Memory: Revitalizing Memory-Augmented Agents for Reinforcement Learning},
+>  author={Le, Hung and Do, Kien and Nguyen, Dung and Gupta, Sunil and Venkatesh, Svetha},
+>  journal={arXiv preprint arXiv:2410.10132},
+>  year={2024}
+> }
+> ```
+>
 
 # SHM
 Source code for Stable Hadamard Memory paper. 
