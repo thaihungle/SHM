@@ -37,6 +37,19 @@
 - SHM provides a stable and efficient approach to neural memory construction in deep sequence models, offering a strong foundation for advanced neural architectures.
 - SHM is designed to be flexible and adaptable, making it easy to integrate into a wide range of applications and research workflows.
 
+**SHM Math is Simple**
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/328189d0-e26f-40b0-9e48-980b0bb80f5e" height=100>
+</div>
+
+**Special cases of SHM**
+- SSM: M, C, and U are vectors
+- Linear Attention: Ct=1
+- xLSTM: Ct is a scalar
+
+
+
+
 📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
 
 > [!IMPORTANT]
