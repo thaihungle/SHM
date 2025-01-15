@@ -12,7 +12,7 @@
 <div align="center">
 
 [![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange)](https://pytorch.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.4-orange)](https://pytorch.org/)
 [![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)](https://github.com/proroklab/popgym)
 [![Pomdp-Baselines](https://img.shields.io/badge/Power_by-Pomdp_Baselines-pink)](https://github.com/twni2016/pomdp-baselines)
 
@@ -52,17 +52,39 @@ SHM excels at long-term reasoning due to its attention-free, parallelizable desi
 > ```
 >
 
+## 🚀 Installation and Quick Start
+
+#### ⏬ Cloning the Repository
+
+First, clone the SHM repository:
+
+```bash
+cd /path/to/your/project
+git clone https://github.com/thaihungle/SHM.git
+```
+
+#### 💿 Installing Dependencies
+
+Python 3.8 or higher is recommended. If you use GPUs, CUDA 11 or higher is recommended. 
+After ensuring PyTorch is installed correctly, you can install the other dependencies:
+
+#### Example Setup: Python 3.8 + PyTorch 2.4.0
+
+```bash
+# Install Python
+conda create -n SHM python=3.8
+conda activate SHM
+# Install PyTorch
+pip install torch==2.4.0
+# Install other dependencies
+pip install -r requirements.txt
+```
+
 # SHM
 Source code for Stable Hadamard Memory paper. 
 Find the SHM implementation at popgym/baselines/ray_models/ray_shm.py  
 The code is based on: https://github.com/proroklab/popgym 
 
-
-### Setup
-python 3.8  
-```
-pip install -r requirements.txt   
-```
 
 ### Run Training
 ```
