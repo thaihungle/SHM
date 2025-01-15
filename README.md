@@ -161,7 +161,8 @@ In addition to default POPGym baselines. We have added the following models:
 
 <details><summary>Other baselines</summary>
   
-[FFM](ttps://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
+- [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
+- [GRU](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_gru.py)
 
 </details>
 
