@@ -21,10 +21,9 @@
 
 <div align="center">
 
-🎉 [**Getting Started**](./tutorial/getting_started.md) **|**
-📦 [**Tasks**](./tutorial/dataset_design.md) **|**
-🧠 [**Model**](./tutorial/model_design.md) **|**
-📜 [**Baselines**](./baselines/)
+🎉 [**Getting Started**](#install)) **|**
+📦 [**Benchmarks**](./tutorial/dataset_design.md) **|**
+🧠 [**Baselines**](./baselines/)
 
 </div>
 
@@ -52,7 +51,7 @@ SHM excels at long-term reasoning due to its attention-free, parallelizable desi
 > ```
 >
 
-## 🚀 Installation and Quick Start
+## <a name="install"></a> 🚀 Installation and Quick Start
 
 #### ⏬ Cloning the Repository
 
@@ -79,6 +78,8 @@ conda activate SHM
 # Install other dependencies
 pip install -r popgym_requirements.txt
 ```
+
+## 🎯 Benchmarks
 
 #### Tasks
 Source code for Stable Hadamard Memory paper. 
