@@ -158,9 +158,9 @@ In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
 - [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
-<details><summary>**Full list of baselines**</summary>
 
-[hi][FFM](ttps://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
+<details><summary>Other baselines</summary>
+[FFM](ttps://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 </details>
 
