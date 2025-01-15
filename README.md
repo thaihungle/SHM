@@ -22,9 +22,10 @@
 <div align="center">
 
 🚀 [**Getting Started**](#install) **|**
+🪛 [**Usage**](#usage) **|**
 🎯 [**Benchmarks**](#bench) **|**
-🧠 [**Baselines**](#baselines)
-
+🧠 [**Baselines**](#baselines)**|**
+🤝 [**Todo**](#todo)
 </div>
 
 **Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients. 
@@ -98,7 +99,24 @@ conda activate SHM
 # Install other dependencies
 pip install -r pompd_requirements.txt
 ```
+## <a name="usage"></a> 🪛 Usage
+SHM can be used as an independent Pytorch module:
+``` python
+import torch
+from mamba_ssm import Mamba
 
+batch, length, dim = 2, 64, 16
+x = torch.randn(batch, length, dim).to("cuda")
+model = Mamba(
+    # This module uses roughly 3 * expand * d_model^2 parameters
+    d_model=dim, # Model dimension d_model
+    d_state=16,  # SSM state expansion factor
+    d_conv=4,    # Local convolution width
+    expand=2,    # Block expansion factor
+).to("cuda")
+y = model(x)
+assert y.shape == x.shape
+```
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
@@ -112,7 +130,7 @@ Here, we focus on the most memory-intensive tasks:
   
 Each task consists of 3 mode of environments: easy, medium and hard. 
 
-**Example Training with SHM with memory size of 128:** 
+**Example easy training with SHM with memory size of 128:** 
 ```
 cd popgym
 python train.py --env AutoencodeEasy --model shm --m 128
@@ -120,13 +138,13 @@ python train.py --env BattleshipEasy --model shm --m 128
 python train.py --env ConcentrationEasy --model shm --m 128
 python train.py --env RepeatPreviousEasy --model shm --m 128
 ```
-**Example Training with SHM with memory size of 32:** 
+**Example hard training with SHM with memory size of 32:** 
 ```
 cd popgym
-python train.py --env AutoencodeEasy --model shm --m 32
-python train.py --env BattleshipEasy --model shm --m 32
-python train.py --env ConcentrationEasy --model shm --m 32
-python train.py --env RepeatPreviousEasy --model shm --m 32
+python train.py --env AutoencodeHard --model shm --m 32
+python train.py --env BattleshipHard --model shm --m 32
+python train.py --env ConcentrationHard --model shm --m 32
+python train.py --env RepeatPreviousHard --model shm --m 32
 ```
 
 **Results and Logs**
@@ -142,3 +160,9 @@ In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
 - [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
+
+## <a name="todo"></a> 🤝 Things to Do
+- [X] POPgym Tasks
+- [ ] Pomdp-baseline Tasks
+- [ ] Time-series Tasks
+- [ ] LLM Tasks
