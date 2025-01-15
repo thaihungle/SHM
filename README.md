@@ -31,8 +31,13 @@
 **Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients.
 SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
 
-✨ If you find SHM helpful, feel free to share your feedback or cite our work. Your support means a lot!
-For more details or to get started, check out the documentation. Let’s innovate together!
+✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
+
+**Why SHM?**
+- SHM provides a stable and efficient approach to memory management in deep sequence models, offering a strong foundation for advanced neural architectures.
+- SHM is designed to be flexible and adaptable, making it easy to integrate into a wide range of applications and research workflows.
+
+📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
 
 # SHM
 Source code for Stable Hadamard Memory paper. 
