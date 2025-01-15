@@ -43,12 +43,16 @@
 </div>
 
 **Special cases of SHM**
-- [SSM](https://github.com/state-spaces/mamba): $M, C, and U$ are vectors
+- [SSM](https://github.com/state-spaces/mamba): $M$, $C$, and $U$ are vectors
 - [Linear Attention](https://github.com/lucidrains/linear-attention-transformer): $C_t=1$
 - [mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
 
 
-📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
+📜 For more details, check out:
+- [Paper](https://arxiv.org/abs/2410.10132)
+- [Blogs](https://open.substack.com/pub/hungleai/p/stable-hadamard-memory-the-unified?r=3an4d1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true)
+
+  Feel free to reach out with your suggestions. We're constantly working to improve and expand the framework.
 
 > [!IMPORTANT]
 > If you find this repository helpful for your work, please consider citing as follows:
