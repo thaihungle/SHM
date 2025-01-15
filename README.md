@@ -11,7 +11,7 @@
 
 <div align="center">
 
-[![LICENSE](https://img.shields.io/badge/License-MIT-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
+[![LICENSE](https://img.shields.io/badge/License-Apache-green)](https://github.com/thaihungle/SHM/blob/main/LICENSE)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4-orange)](https://pytorch.org/)
 [![Popgym](https://img.shields.io/badge/Power_by-Popgym-blue)](https://github.com/proroklab/popgym)
 [![Pomdp-Baselines](https://img.shields.io/badge/Power_by-Pomdp_Baselines-pink)](https://github.com/twni2016/pomdp-baselines)
@@ -43,11 +43,9 @@
 </div>
 
 **Special cases of SHM**
-- SSM: M, C, and U are vectors
-- Linear Attention: Ct=1
-- xLSTM: Ct is a scalar
-
-
+- [!SSM](https://github.com/state-spaces/mamba): $M, C, and U$ are vectors
+- [!Linear Attention](https://github.com/lucidrains/linear-attention-transformer): $C_t=1$
+- [!mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
 
 
 📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
