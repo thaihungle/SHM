@@ -139,6 +139,6 @@ See folder ./popgym/results for Popgym's outputs and logs. You should be able to
 
 ## <a name="baselines"></a> 🧠 Baselines
 In addition to default POPGym baselines. We have added the following models:
-- [SHM](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_shm.py)
-- [Mamba (S6)](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_mamba.py)
-- [mLSTM](https://github.com/thaihungle/SHM/popgym/baselines/ray_models/ray_mLSTM.py)  
+- [SHM](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_shm.py)
+- [Mamba (S6)](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_mamba.py)
+- [mLSTM](https://github.com/thaihungle/SHM/blob/popgym/baselines/ray_models/ray_mLSTM.py)  
