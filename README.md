@@ -27,10 +27,8 @@
 
 </div>
 
-**Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients.
-
+**Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients. 
 🎉 SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
-
 ✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
 
 **Why SHM?**
@@ -41,7 +39,7 @@
   <img src="https://github.com/user-attachments/assets/328189d0-e26f-40b0-9e48-980b0bb80f5e" height=100>
 </div>
 
-**Special cases of SHM**
+**Special cases of SHM:**
 - [SSM](https://github.com/state-spaces/mamba): $M_t$, $C_t$, and $U_t$ are vectors
 - [Linear Attention](https://github.com/lucidrains/linear-attention-transformer): $C_t=1$
 - [mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
