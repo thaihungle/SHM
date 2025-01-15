@@ -43,9 +43,9 @@
 </div>
 
 **Special cases of SHM**
-- [!SSM](https://github.com/state-spaces/mamba): $M, C, and U$ are vectors
-- [!Linear Attention](https://github.com/lucidrains/linear-attention-transformer): $C_t=1$
-- [!mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
+- [SSM](https://github.com/state-spaces/mamba): $M, C, and U$ are vectors
+- [Linear Attention](https://github.com/lucidrains/linear-attention-transformer): $C_t=1$
+- [mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
 
 
 📜 For more details and tutorials, check out our documentation or reach out with your suggestions. We're constantly working to improve and expand the framework.
