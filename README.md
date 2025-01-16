@@ -106,6 +106,7 @@ import torch
 from shm import SHM
 
 batch, length, dim = 2, 64, 16
+# remove to("cuda") if you use CPU
 x = torch.randn(batch, length, dim).to("cuda")
 model = SHM(
   input_size=dim, 
@@ -120,7 +121,7 @@ Just so you know, when we adapt to specific tasks, we can slightly modify the im
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
-#### 1⃣️ POPGym
+#### ☝️ POPGym
 [POPGym](https://github.com/proroklab/popgym) is designed to benchmark memory in deep reinforcement learning. 
 Here, we focus on the most memory-intensive tasks:
 - Autoencode
@@ -160,7 +161,7 @@ We follow the well-established hyperparameters set by POPGym. We only tune the m
 
 For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py).
 
-#### 2⃣️ Pomdp-baseline
+#### ✌️ Pomdp-baseline
 
 TBU
 
