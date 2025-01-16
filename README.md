@@ -115,12 +115,12 @@ model = SHM(
 y = model(x)
 ```
 
-Implementation details of the SHM module can be found in [shm.py](https://github.com/thaihungle/SHM/blob/main/shm.py)
+Implementation details of the SHM module can be found in [shm.py](https://github.com/thaihungle/SHM/blob/main/shm.py). 
 Just so you know, when we adapt to specific tasks, we can slightly modify the implementation to follow the common practice (e.g., add residual shortcut).
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
-#### POPGym
+#### 1⃣️ POPGym
 [POPGym](https://github.com/proroklab/popgym) is designed to benchmark memory in deep reinforcement learning. 
 Here, we focus on the most memory-intensive tasks:
 - Autoencode
@@ -160,7 +160,9 @@ We follow the well-established hyperparameters set by POPGym. We only tune the m
 
 For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py).
 
-#### Pomdp-baseline
+#### 2⃣️ Pomdp-baseline
+
+TBU
 
 ## <a name="baselines"></a> 🧠 Baselines
 In addition to default POPGym baselines. We have added the following models:
@@ -195,10 +197,6 @@ python train_popgym.py --env AutoencodeEasy --model gru --h 1024
 - [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 </details>
-
-
-
-
 
 
 ## <a name="todo"></a> 🤝 Things to Do
