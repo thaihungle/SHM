@@ -22,7 +22,7 @@
 <div align="center">
 
 🚀 [**Getting Started**](#install) **|**
-🪛 [**Usage**](#usage) **|**
+🔧 [**Usage**](#usage) **|**
 🎯 [**Benchmarks**](#bench) **|**
 🧠 [**Baselines**](#baselines)**|**
 🤝 [**Todo**](#todo)
@@ -30,7 +30,7 @@
 
 **Stable Hadamard Memory (SHM)** framework delivers a breakthrough in scalable and robust memory for deep learning models. Using the Hadamard product for updates and calibration, it ensures stable gradient flows while avoiding issues like vanishing or exploding gradients. 
 🎉 SHM excels at long-term reasoning due to its attention-free, parallelizable design, and linear complexity, making it ideal for large-scale tasks.
-✨ If you find SHM helpful, feel free to share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
+✨ If you find SHM helpful, please share your feedback, cite our work, and give it a ⭐. Your support means a lot! 
 
 **Why SHM?**
 - SHM provides a stable and efficient approach to neural memory construction in deep sequence models, offering a strong foundation for advanced neural architectures.
@@ -47,7 +47,7 @@
 
 
 📜 For more details, check out our [paper](https://arxiv.org/abs/2410.10132) and [blogs](https://open.substack.com/pub/hungleai/p/stable-hadamard-memory-the-unified?r=3an4d1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true).
-Feel free to reach out with your suggestions. We're constantly working to improve and expand the framework.
+Please feel free to let me know your suggestions. We're constantly working to improve and expand the framework.
 
 > [!IMPORTANT]
 > If you find this repository helpful for your work, please consider citing as follows:
@@ -99,7 +99,7 @@ conda activate SHM
 # Install other dependencies
 pip install -r pompd_requirements.txt
 ```
-## <a name="usage"></a> 🪛 Usage
+## <a name="usage"></a> 🔧 Usage
 SHM can be used as an independent Pytorch module:
 ``` python
 import torch
@@ -115,8 +115,8 @@ model = SHM(
 y = model(x)
 ```
 
-Implementation details of SHM module can be found in [shm.py](https://github.com/thaihungle/SHM/blob/main/shm.py)
-Please note that when we adapt to specific tasks, we can slightly modify the implementation to follow the common practice (e.g., add residual shortcut).
+Implementation details of the SHM module can be found in [shm.py](https://github.com/thaihungle/SHM/blob/main/shm.py)
+Just so you know, when we adapt to specific tasks, we can slightly modify the implementation to follow the common practice (e.g., add residual shortcut).
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
@@ -128,16 +128,16 @@ Here, we focus on the most memory-intensive tasks:
 - Concentration
 - RepeatPrevious
   
-Each task consists of 3 mode of environments: easy, medium and hard. 
+Each task consists of 3 modes of environments: easy, medium, and hard. 
 
-**Example easy training with SHM with memory size of 128:** 
+**Example easy training using SHM with a memory size of 128:** 
 ```
 python train_popgym.py --env AutoencodeEasy --model shm --m 128
 python train_popgym.py --env BattleshipEasy --model shm --m 128
 python train_popgym.py --env ConcentrationEasy --model shm --m 128
 python train_popgym.py --env RepeatPreviousEasy --model shm --m 128
 ```
-**Example hard training with SHM with memory size of 32:** 
+**Example hard training using SHM with a memory size of 32:** 
 ```
 python train_popgym.py --env AutoencodeHard --model shm --m 32
 python train_popgym.py --env BattleshipHard --model shm --m 32
@@ -152,12 +152,31 @@ See folder ./popgym_results for Popgym's outputs and logs. You should be able to
   <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=300>
 </div>
 
+**Hyperparameters**
+
+We follow the well-established hyperparameters set by POPGym. We only tune the memory-related hyperparameters:
+- $m$: memory size for matrix-based memory models such as SHM
+- $h$: hidden size for vector-based memory models such as GRU
+
+For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py).
+
+#### Pomdp-baseline
 
 ## <a name="baselines"></a> 🧠 Baselines
 In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
 - [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
+
+To run experiments with baselines, please refer to  [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py) to add the baseline calls. 
+Then, run the training command. 
+
+**Example easy training using GRU with different hidden sizes:** 
+```
+python train_popgym.py --env AutoencodeEasy --model gru --h 256
+python train_popgym.py --env AutoencodeEasy --model gru --h 512
+python train_popgym.py --env AutoencodeEasy --model gru --h 1024
+```
 
 <details><summary>Other baselines</summary>
   
@@ -178,7 +197,7 @@ In addition to default POPGym baselines. We have added the following models:
 </details>
 
 
-#### Pomdp-baseline
+
 
 
 
