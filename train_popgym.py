@@ -30,11 +30,11 @@ def config_gru():
 		"preprocessor_output_size": 64,
 		"preprocessor": nn.Sequential(nn.Linear(128, 64), nn.ReLU()),
 		# this is the size of the recurrent state in most cases
-		"hidden_size": 256,
+		"hidden_size": args.h,
 		# We should also change other parts of the architecture to use
 		# this new hidden size
 		# For the GRU, the output is of size hidden_size
-		"postprocessor": nn.Sequential(nn.Linear(256, 64), nn.ReLU()),
+		"postprocessor": nn.Sequential(nn.Linear(args.h, 64), nn.ReLU()),
 		"postprocessor_output_size": 64,
 		# Actor and critic networks
 		"actor": nn.Linear(64, 64),
