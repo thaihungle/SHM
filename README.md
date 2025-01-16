@@ -108,11 +108,7 @@ from shm import SHM
 batch, length, dim = 2, 64, 16
 # remove to("cuda") if you use CPU
 x = torch.randn(batch, length, dim).to("cuda")
-model = SHM(
-  input_size=dim, 
-  mem_size=16,  #H in the paper
-  output_size=32
-).to("cuda")
+model = SHM(input_size=dim, mem_size=16, output_size=32).to("cuda")
 y = model(x)
 ```
 
@@ -169,7 +165,7 @@ Here, we focus on 2 tasks:
 - Long-horizon Credit Assignment
 Each task consists of several environments. 
 
-**Example easy training using SHM with a memory size of 24:** 
+**Example training using SHM with a memory size of 24:** 
 ```
 python train_pomdp.py --task meta --env wind --model shm --m 24
 python train_pomdp.py --task meta --env point_robot --model shm --m 24
@@ -235,10 +231,12 @@ In addition to default PPomdp-baselines (MLP, GRU, and LSTM). We have added the 
 
 To run experiments with baselines, please refer to  [train_pomdp.py](https://github.com/thaihungle/SHM/blob/main/train_pomdp.py) for hyperparameter details.
 
-**Example easy training using GRU** 
+**Example training using GRU** 
 ```
 python train_pomdp.py --task meta --env wind --model gru
-
+python train_pomdp.py --task meta --env point_robot --model gru
+python train_pomdp.py --task credit --env key_to_door --model gru
+python train_pomdp.py --task credit --env visual_match --model gru
 ```
 
 
