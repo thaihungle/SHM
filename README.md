@@ -24,7 +24,7 @@
 🚀 [**Getting Started**](#install) **|**
 🔧 [**Usage**](#usage) **|**
 🎯 [**Benchmarks**](#bench) **|**
-🧠 [**Baselines**](#baselines)**|**
+🧠 [**Baselines**](#baselines) **|**
 🤝 [**Todo**](#todo)
 </div>
 
@@ -35,7 +35,7 @@
 **Why SHM?**
 - SHM provides a stable and efficient approach to neural memory construction in deep sequence models, offering a strong foundation for advanced neural architectures.
 - SHM is designed to be flexible and adaptable, making it easy to integrate into a wide range of applications and research workflows.
-- SHM math is simple:
+- SHM math is simple, yet generic:
 <div align="center">
   <img src="https://github.com/user-attachments/assets/328189d0-e26f-40b0-9e48-980b0bb80f5e" height=100>
 </div>
@@ -161,7 +161,7 @@ We follow the well-established hyperparameters set by POPGym. We only tune the m
 
 For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py).
 
-#### ✌️ Pomdp-baseline
+#### ✌️ Pomdp-baselines
 
 TBU
 
@@ -201,6 +201,10 @@ python train_popgym.py --env AutoencodeEasy --model gru --h 1024
 - [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 </details>
+
+#### ✌️ Pomdp-baselines
+
+TBU
 
 
 ## <a name="todo"></a> 🤝 Things to Do
