@@ -148,7 +148,7 @@ python train_popgym.py --env RepeatPreviousHard --model shm --m 32
 
 **Results and Logs**
 
-See folder ./popgym_results for Popgym's outputs and logs. You should be able to reproduce results like this:
+See folder ./results_popggym for Popgym's outputs and logs (we support Tensorboard!). You should be able to reproduce results like this:
 <div align="center">
   <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=300>
 </div>
@@ -166,6 +166,9 @@ For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/S
 TBU
 
 ## <a name="baselines"></a> 🧠 Baselines
+
+#### ☝️ POPGym
+
 In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)

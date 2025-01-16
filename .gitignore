@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 results/
+results_popgym/
+results_pomdp/

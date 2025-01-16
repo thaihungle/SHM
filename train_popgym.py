@@ -220,5 +220,5 @@ if __name__ == '__main__':
 	ray.tune.run("PPO", config=config, 
 				num_samples = args.nrun, 
 				stop={"timesteps_total": 15_000_000},
-				local_dir=f"./results/{args.env}/{args.model}/")
+				local_dir=f"./results_popgym/{args.env}/{args.model}/")
 
