@@ -169,7 +169,7 @@ TBU
 In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
-- [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mLSTM.py)  
+- [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mlstm.py)  
 
 To run experiments with baselines, please refer to  [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py) to add the baseline calls. 
 Then, run the training command. 
