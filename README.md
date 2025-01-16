@@ -192,7 +192,8 @@ See folder *./results_pomdp* for Pomdp-baselines's outputs and logs (we support 
 In addition to default POPGym baselines. We have added the following models:
 - [SHM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_shm.py)
 - [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mamba.py)
-- [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mlstm.py)  
+- [mLSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mlstm.py)
+- [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 To run experiments with baselines, please refer to  [train_popgym.py](https://github.com/thaihungle/SHM/blob/main/train_popgym.py) to add the baseline calls. 
 Then, run the training command. 
@@ -218,13 +219,28 @@ python train_popgym.py --env AutoencodeEasy --model gru --h 1024
 - [FWP](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_fwp.py)
 - [Linear Attention](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_linear_attention.py)
 - [S4](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_s4d.py)
-- [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
+
 
 </details>
 
 #### ✌️ Pomdp-baselines
 
-TBU
+In addition to default PPomdp-baselines (MLP, GRU, and LSTM). We have added the following models:
+- [SHM](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/shm.py)
+- [Mamba (S6)](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/mamba.py)
+- [mLSTM](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/xlstm.py)
+- [FFM](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/ffm.py)
+- [FWP](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/fwp.py)
+- [GPT-2](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/gpt2.py)  
+
+To run experiments with baselines, please refer to  [train_pomdp.py](https://github.com/thaihungle/SHM/blob/main/train_pomdp.py) for hyperparameter details.
+
+**Example easy training using GRU** 
+```
+python train_pomdp.py --task meta --env wind --model gru
+
+```
+
 
 
 ## <a name="todo"></a> 🤝 Things to Do
