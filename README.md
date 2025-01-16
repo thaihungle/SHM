@@ -177,6 +177,14 @@ python train_pomdp.py --task credit --env key_to_door --model shm --m 24
 python train_pomdp.py --task credit --env visual_match --model shm --m 24
 ```
 
+**Results and Logs**
+
+See folder ./results_pomdp for Pomdp-baselines's outputs and logs (we support Tensorboard!). You should be able to reproduce results like this:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/16e729af-8bb1-44a1-bfae-296bb19cb732" height=300>
+</div>
+
 ## <a name="baselines"></a> 🧠 Baselines
 
 #### ☝️ POPGym
