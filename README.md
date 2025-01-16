@@ -163,10 +163,11 @@ For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/S
 
 #### ✌️ Pomdp-baselines
 
-[Pomdp-baselines](https://github.com/twni2016/pomdp-baselines) benchmarks in several subareas of POMDPs (including meta RL, robust RL, generalization in RL, temporal credit assignment) 
+[Pomdp-baselines](https://github.com/twni2016/pomdp-baselines) benchmarks in several subareas of POMDPs (including meta RL, robust RL, generalization in RL, temporal credit assignment). 
 Here, we focus on 2 tasks:
 - Meta RL
 - Long-horizon Credit Assignment
+Each task consists of several environments. 
 
 **Example easy training using SHM with a memory size of 24:** 
 ```
