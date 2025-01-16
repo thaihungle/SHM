@@ -84,8 +84,8 @@ We recommend setting up separate dependencies for each benchmark.
 
 ```bash
 # Install Python
-conda create -n SHM python=3.8
-conda activate SHM
+conda create -n SHM-popgym python=3.8
+conda activate SHM-popgym
 # Install other dependencies
 pip install -r popgym_requirements.txt
 ```
@@ -94,8 +94,8 @@ pip install -r popgym_requirements.txt
 
 ```bash
 # Install Python
-conda create -n SHM python=3.8
-conda activate SHM
+conda create -n SHM-pomdp python=3.8
+conda activate SHM-pomdp
 # Install other dependencies
 pip install -r pompd_requirements.txt
 ```
@@ -163,7 +163,18 @@ For other hyperparameters, see [train_popgym.py](https://github.com/thaihungle/S
 
 #### ✌️ Pomdp-baselines
 
-TBU
+[Pomdp-baselines](https://github.com/twni2016/pomdp-baselines) benchmarks in several subareas of POMDPs (including meta RL, robust RL, generalization in RL, temporal credit assignment) 
+Here, we focus on 2 tasks:
+- Meta RL
+- Long-horizon Credit Assignment
+
+**Example easy training using SHM with a memory size of 24:** 
+```
+python train_pomdp.py --task meta --env wind --model shm --m 24
+python train_pomdp.py --task meta --env point_robot --model shm --m 24
+python train_pomdp.py --task credit --env key_to_door --model shm --m 24
+python train_pomdp.py --task credit --env visual_match --model shm --m 24
+```
 
 ## <a name="baselines"></a> 🧠 Baselines
 
@@ -212,3 +223,6 @@ TBU
 - [ ] Pomdp-baseline Tasks
 - [ ] Time-series Tasks
 - [ ] LLM Tasks
+
+Any contribution is welcome.
+
