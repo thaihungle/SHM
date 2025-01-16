@@ -148,7 +148,7 @@ python train_popgym.py --env RepeatPreviousHard --model shm --m 32
 
 **Results and Logs**
 
-See folder ./results_popggym for Popgym's outputs and logs (we support Tensorboard!). You should be able to reproduce results like this:
+See folder *./results_popggym* for Popgym's outputs and logs (we support Tensorboard!). You should be able to reproduce results like this:
 <div align="center">
   <img src="https://github.com/user-attachments/assets/32d0b42c-4754-4776-be01-8965740962ad" height=300>
 </div>
@@ -179,10 +179,10 @@ python train_pomdp.py --task credit --env visual_match --model shm --m 24
 
 **Results and Logs**
 
-See folder ./results_pomdp for Pomdp-baselines's outputs and logs (we support Tensorboard!). You should be able to reproduce results like this:
+See folder *./results_pomdp* for Pomdp-baselines's outputs and logs (we support Tensorboard!). You should be able to reproduce something like this:
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/16e729af-8bb1-44a1-bfae-296bb19cb732" height=300>
+  <img src="https://github.com/user-attachments/assets/16e729af-8bb1-44a1-bfae-296bb19cb732" height=500>
 </div>
 
 ## <a name="baselines"></a> 🧠 Baselines
