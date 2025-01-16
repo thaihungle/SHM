@@ -103,20 +103,20 @@ pip install -r pompd_requirements.txt
 SHM can be used as an independent Pytorch module:
 ``` python
 import torch
-from mamba_ssm import Mamba
+from shm import SHM
 
 batch, length, dim = 2, 64, 16
 x = torch.randn(batch, length, dim).to("cuda")
-model = Mamba(
-    # This module uses roughly 3 * expand * d_model^2 parameters
-    d_model=dim, # Model dimension d_model
-    d_state=16,  # SSM state expansion factor
-    d_conv=4,    # Local convolution width
-    expand=2,    # Block expansion factor
+model = SHM(
+  input_size=dim, 
+  mem_size=16,  #H in the paper
+  output_size=32
 ).to("cuda")
 y = model(x)
-assert y.shape == x.shape
 ```
+
+Implementation details of SHM module can be found in [shm.py](https://github.com/thaihungle/SHM/blob/main/shm.py)
+Please note that when we adapt to specific tasks, we can slightly modify the implementation to follow the common practice (e.g., add residual shortcut).
 
 ## <a name="bench"></a> 🎯 Benchmarks
 
@@ -161,10 +161,26 @@ In addition to default POPGym baselines. We have added the following models:
 
 <details><summary>Other baselines</summary>
   
-- [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
+- [MLP](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_mlp.py)
+- [MLP (frame stacked)](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_framestack.py)
+- [RNN](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_elman.py)
 - [GRU](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_gru.py)
+- [LSTM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_lstm.py)
+- [CNN](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_frameconv.py)
+- [iRNN](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_indrnn.py)
+- [LMU](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_lmu.py)
+- [DNC](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_doffnc.py)
+- [FWP](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_fwp.py)
+- [Linear Attention](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_linear_attention.py)
+- [S4](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_s4d.py)
+- [FFM](https://github.com/thaihungle/SHM/blob/main/popgym/baselines/ray_models/ray_ffm.py)
 
 </details>
+
+
+#### Pomdp-baseline
+
+
 
 ## <a name="todo"></a> 🤝 Things to Do
 - [X] POPgym Tasks
