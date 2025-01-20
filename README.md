@@ -46,7 +46,7 @@
 - [mLSTM](https://github.com/NX-AI/xlstm): $C_t$ is a scalar
 
 
-📜 For more details, check out our [paper](https://arxiv.org/abs/2410.10132) and [blogs](https://open.substack.com/pub/hungleai/p/stable-hadamard-memory-the-unified?r=3an4d1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true).
+📜 For more details, check out our [paper](https://arxiv.org/abs/2410.10132), [reviews](https://openreview.net/forum?id=We5z3UEnUY) and [blogs](https://open.substack.com/pub/hungleai/p/stable-hadamard-memory-the-unified?r=3an4d1&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true).
 Please feel free to let me know your suggestions. We're constantly working to improve and expand the framework.
 
 > [!IMPORTANT]
