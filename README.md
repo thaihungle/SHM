@@ -229,7 +229,7 @@ In addition to default PPomdp-baselines (MLP, GRU, and LSTM). We have added the 
 - [FWP](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/fwp.py)
 - [GPT-2](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/torchkit/gpt2.py)  
 
-To run experiments with baselines, please refer to  [train_pomdp.py](https://github.com/thaihungle/SHM/blob/main/train_pomdp.py) and [config](https://github.com/thaihungle/SHM/blob/main/pomdb-baselines/configs/) for hyperparameter details.
+To run experiments with baselines, please refer to  [train_pomdp.py](https://github.com/thaihungle/SHM/blob/main/train_pomdp.py) and [config files](https://github.com/thaihungle/SHM/blob/main/pomdp-baselines/configs/) for hyperparameter details.
 
 **Example training using GRU** 
 ```
