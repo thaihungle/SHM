@@ -165,12 +165,12 @@ Here, we focus on 2 tasks:
 - Long-horizon Credit Assignment
 Each task consists of several environments. 
 
-**Example training using SHM with a memory size of 24:** 
+**Example training using SHM (default $m=24$)** 
 ```
-python train_pomdp.py --task meta --env wind --model shm --m 24
-python train_pomdp.py --task meta --env point_robot --model shm --m 24
-python train_pomdp.py --task credit --env key_to_door --model shm --m 24
-python train_pomdp.py --task credit --env visual_match --model shm --m 24
+python train_pomdp.py --task meta --env wind --model shm
+python train_pomdp.py --task meta --env point_robot --model shm
+python train_pomdp.py --task credit --env key_to_door --model shm
+python train_pomdp.py --task credit --env visual_match --model shm
 ```
 
 **Results and Logs**
