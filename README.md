@@ -241,9 +241,9 @@ python train_pomdp.py --task credit --env visual_match --model gru
 
 ## <a name="todo"></a> 🤝 Things to Do
 - [X] POPgym Tasks
-- [.] Pomdp-baseline Tasks
+- [X] Pomdp-baseline Tasks
 - [ ] Time-series Tasks
 - [ ] LLM Tasks
 
-Any contribution is welcome.
+Any contribution you can make is welcome.
 
