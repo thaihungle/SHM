@@ -167,10 +167,8 @@ Each task consists of several environments.
 
 **Example training using SHM (default $m=24$)** 
 ```
-python train_pomdp.py --task meta --env wind --model shm
-python train_pomdp.py --task meta --env point_robot --model shm
-python train_pomdp.py --task credit --env key_to_door --model shm
-python train_pomdp.py --task credit --env visual_match --model shm
+python train_pomdp.py --task meta --env wind_50_150 --model shm
+python train_pomdp.py --task meta --env point_robot_50_150 --model shm
 ```
 
 **Results and Logs**
@@ -243,7 +241,7 @@ python train_pomdp.py --task credit --env visual_match --model gru
 
 ## <a name="todo"></a> 🤝 Things to Do
 - [X] POPgym Tasks
-- [ ] Pomdp-baseline Tasks
+- [.] Pomdp-baseline Tasks
 - [ ] Time-series Tasks
 - [ ] LLM Tasks
 
