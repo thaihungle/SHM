@@ -53,11 +53,13 @@ Please feel free to let me know your suggestions. We're constantly working to im
 > If you find this repository helpful for your work, please consider citing as follows:
 >
 > ```LaTeX
-> @article{le2024stable,
->  title={Stable Hadamard Memory: Revitalizing Memory-Augmented Agents for Reinforcement Learning},
->  author={Le, Hung and Do, Kien and Nguyen, Dung and Gupta, Sunil and Venkatesh, Svetha},
->  journal={arXiv preprint arXiv:2410.10132},
->  year={2024}
+>@inproceedings{
+>le2025stable,
+>title={Stable Hadamard Memory: Revitalizing Memory-Augmented Agents for Reinforcement Learning},
+>author={Hung Le and Dung Nguyen and Kien Do and Sunil Gupta and Svetha Venkatesh},
+>booktitle={The Thirteenth International Conference on Learning Representations},
+>year={2025},
+>url={https://openreview.net/forum?id=We5z3UEnUY}
 > }
 > ```
 >
